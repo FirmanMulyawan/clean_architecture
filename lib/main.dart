@@ -1,7 +1,7 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+// import 'features/profile/presentation/bloc/profile_bloc.dart';
 
 import 'core/routes/my_router.dart';
 import 'features/injection.dart';
@@ -22,12 +22,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return BlocProvider(
-    //   create: (context) => ,
-    //   child: MaterialApp.router(
-    //   routerConfig: MyRouter().router,
-    // )
-    // );
+    // return MultiBlocProvider(
+    //     providers: [
+    //       BlocProvider(create: (context) => myInjection<ProfileBloc>())
+    //     ],
+    //     child: MaterialApp.router(
+    //       routerConfig: MyRouter().router,
+    //     ));
     return MaterialApp.router(
       routerConfig: MyRouter().router,
     );
